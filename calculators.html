@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Calculators | Carmen & Pearl CPA's</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <div class="logo-mark">CP</div>
+        <div class="logo-text"><span class="logo-name">Carmen &amp; Pearl CPA's</span><span class="logo-tagline">Tax Help Center</span></div>
+      </a>
+      <nav class="header-nav">
+        <a href="calculators.html" class="nav-link" style="background:var(--primary-light);color:var(--primary-dark);border-color:var(--primary)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/></svg> Calculators</a>
+        <a href="deadlines.html" class="nav-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Deadlines</a>
+      </nav>
+      <div class="header-phones">
+        <a href="tel:5164967300" class="phone-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.32 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012.23 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Li: 516-496-7300</a>
+        <a href="tel:2122236300" class="phone-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.32 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012.23 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> NYC: 212-223-6300</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> Tax Calculators</div>
+      <div class="page-hero-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="10" y2="18"/><line x1="14" y1="18" x2="16" y2="18"/></svg></div>
+      <h1>Tax Calculators</h1>
+      <p>Quick estimates for common tax scenarios — for planning purposes only</p>
+    </div>
+  </div>
+
+  <main class="calc-page">
+    <div class="container">
+
+      <div class="calc-nav">
+        <a href="#brackets" class="active">Tax Brackets</a>
+        <a href="#self-employment">Self-Employment Tax</a>
+        <a href="#estimated">Estimated Tax</a>
+        <a href="#withholding">Withholding</a>
+      </div>
+
+      <!-- Tax Bracket Calculator -->
+      <div class="calc-card" id="brackets">
+        <h2>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1976d2" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>
+          2025 Federal Tax Bracket Calculator
+        </h2>
+        <p class="calc-subtitle">Estimates your federal income tax based on gross income and filing status. Assumes standard deduction.</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bc-income">Gross Annual Income</label>
+            <input type="number" id="bc-income" placeholder="e.g. 85000" min="0">
+          </div>
+          <div class="form-group">
+            <label for="bc-status">Filing Status</label>
+            <select id="bc-status">
+              <option value="single">Single</option>
+              <option value="mfj">Married Filing Jointly</option>
+              <option value="hoh">Head of Household</option>
+              <option value="mfs">Married Filing Separately</option>
+            </select>
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcTaxBrackets()">Calculate Tax</button>
+        <div class="calc-result" id="bc-result"></div>
+        <p style="margin-top:14px;font-size:12px;color:var(--text-light)">* Estimate only. Does not include credits, AMT, NIIT, SE tax, state taxes, or other adjustments.</p>
+      </div>
+
+      <!-- Self-Employment Tax Calculator -->
+      <div class="calc-card" id="self-employment">
+        <h2>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f57c00" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+          Self-Employment Tax Calculator
+        </h2>
+        <p class="calc-subtitle">Calculates your Social Security and Medicare taxes as a self-employed individual (Schedule SE).</p>
+        <div class="form-row single">
+          <div class="form-group">
+            <label for="se-profit">Net Self-Employment Profit (Schedule C)</label>
+            <input type="number" id="se-profit" placeholder="e.g. 75000" min="0">
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcSelfEmployment()">Calculate SE Tax</button>
+        <div class="calc-result" id="se-result"></div>
+        <p style="margin-top:14px;font-size:12px;color:var(--text-light)">* 2025 Social Security wage base: $176,100. Does not account for income tax or QBI deduction.</p>
+      </div>
+
+      <!-- Estimated Tax Calculator -->
+      <div class="calc-card" id="estimated">
+        <h2>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7b1fa2" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Estimated Tax Payment Calculator
+        </h2>
+        <p class="calc-subtitle">Helps you determine whether you need to make quarterly estimated tax payments and how much.</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="et-owed">Expected Total Tax Owed This Year</label>
+            <input type="number" id="et-owed" placeholder="e.g. 12000" min="0">
+          </div>
+          <div class="form-group">
+            <label for="et-withheld">Expected Withholding from Wages (W-2)</label>
+            <input type="number" id="et-withheld" placeholder="e.g. 5000" min="0">
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcEstimatedTax()">Calculate Estimates</button>
+        <div class="calc-result" id="et-result"></div>
+        <p style="margin-top:14px;font-size:12px;color:var(--text-light)">* Safe harbor: pay 100% of prior year tax (110% if AGI &gt; $150,000) OR 90% of current year tax. Q2 2026 due June 16, 2026.</p>
+      </div>
+
+      <!-- Withholding Calculator -->
+      <div class="calc-card" id="withholding">
+        <h2>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#388e3c" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Withholding Estimator
+        </h2>
+        <p class="calc-subtitle">Estimates how much should be withheld from your paycheck each pay period to cover federal income tax.</p>
+        <div class="form-row triple">
+          <div class="form-group">
+            <label for="wh-wages">Annual W-2 Wages</label>
+            <input type="number" id="wh-wages" placeholder="e.g. 95000" min="0">
+          </div>
+          <div class="form-group">
+            <label for="wh-status">Filing Status</label>
+            <select id="wh-status">
+              <option value="single">Single</option>
+              <option value="mfj">Married Filing Jointly</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="wh-allowances">Dependents / Credits ($4,300 each)</label>
+            <input type="number" id="wh-allowances" placeholder="0" min="0" max="10">
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcWithholding()">Calculate Withholding</button>
+        <div class="calc-result" id="wh-result"></div>
+        <p style="margin-top:14px;font-size:12px;color:var(--text-light)">* Simplified estimate. Assumes standard deduction only. Use IRS Tax Withholding Estimator (irs.gov/W4app) for a precise result.</p>
+      </div>
+
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;margin-top:8px;">
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.7"><strong style="color:var(--text)">Important disclaimer:</strong> These calculators provide rough estimates for planning purposes only. They do not account for all tax situations, credits, deductions, alternative minimum tax, state taxes, or recent law changes. For an accurate tax projection or personalized advice, please contact our office at <a href="tel:5164967300" style="color:var(--primary)">516-496-7300</a> (LI) or <a href="tel:2122236300" style="color:var(--primary)">212-223-6300</a> (NYC).</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo"><div class="logo-mark small">CP</div><div><strong>Carmen &amp; Pearl CPA's</strong><span>Tax Help Center</span></div></div>
+        <div class="footer-info"><p>Educational resource only. For personalized tax advice, contact our office.</p><p><a href="tel:5164967300">Li: 516-496-7300</a> &nbsp;|&nbsp; <a href="tel:2122236300">NYC: 212-223-6300</a></p></div>
+      </div>
+      <div class="footer-bottom"><p>© 2026 Carmen &amp; Pearl CPA's. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Highlight active calc nav on scroll
+    var sections = document.querySelectorAll('.calc-card');
+    var navLinks = document.querySelectorAll('.calc-nav a');
+    window.addEventListener('scroll', function() {
+      var scrollY = window.scrollY + 120;
+      sections.forEach(function(s) {
+        if (s.offsetTop <= scrollY && s.offsetTop + s.offsetHeight > scrollY) {
+          navLinks.forEach(function(l) { l.classList.remove('active'); });
+          var link = document.querySelector('.calc-nav a[href="#' + s.id + '"]');
+          if (link) link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
